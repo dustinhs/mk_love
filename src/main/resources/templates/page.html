@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Hello, 밍규!</title>
+</head>
+<body>
+
+<div>
+    <button type="button"
+            class="btn btn-primary"
+            id="btnOnStream"
+            onclick="binanceSocketOnff('on')">바이낸스 소켓 ON
+    </button>
+    <button type="button"
+            class="btn btn-secondary"
+            onclick="binanceSocketOnff('off')">바이낸스 소켓 OFF</button>
+    <button type="button" class="btn btn-success">규</button>
+    <button type="button" class="btn btn-danger">하</button>
+    <button type="button" class="btn btn-warning">이</button>
+    <button type="button" class="btn btn-info">루</button>
+    <button type="button" class="btn btn-light">ㅎ</button>
+    <button type="button" class="btn btn-dark">ㅅ</button>
+    <button type="button" class="btn btn-light">ㅎ</button>
+    <button type="button" class="btn btn-link">Link</button>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        시스템
+        <textarea id="txtSysLog" class="w-100" rows="20" disabled></textarea>
+    </div>
+    <div class="col-md-4">
+        시세
+        <textarea id="txtTradeLog" class="w-100" rows="20" disabled></textarea>
+    </div>
+    <div class="col-md-4">
+        온라인
+        <textarea id="txtOnlineUserLog" class="w-100" rows="20" disabled></textarea>
+    </div>
+</div>
+
+
+<!-- bootstrap js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+<!-- WebSocket BEGIN-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.4.0/sockjs.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+<!-- WebSocket END-->
+
+<script th:src="@{/js/index.init.js}"></script>
+<script th:src="@{/js/datafeed.js}"></script>
+
+
+</body>
+</html>
