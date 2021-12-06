@@ -36,13 +36,9 @@ public class BinanceClientController {
         log.info("[binanceStreamOnff] action : " + action);
 
         if(action.equals("on")){
-
             onConnect();
-
         }else if(action.equals("off")){
-
             onClose();
-
         }else{
             return false;
         }

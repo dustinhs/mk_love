@@ -35,6 +35,8 @@ public class MainController {
     public String index(Model model,
                         HttpServletRequest request) throws Exception {
 
+        //바이낸스 ohlc 수신
+        testService.getBinanceKlines();
         return "index";
     }
 

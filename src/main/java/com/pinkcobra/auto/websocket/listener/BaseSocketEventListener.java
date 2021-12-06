@@ -1,7 +1,5 @@
 package com.pinkcobra.auto.websocket.listener;
 
-
-
 import com.pinkcobra.auto.websocket.controller.BaseSocketController;
 import com.pinkcobra.auto.websocket.entity.ClientInfo;
 import org.slf4j.Logger;
